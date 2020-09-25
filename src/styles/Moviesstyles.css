@@ -1,0 +1,46 @@
+.container_movies
+{
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll ;
+    
+
+}
+
+.movie_render
+{
+    justify-content: flex-start;
+    color:black;
+    margin:0 1% 0 0;
+  
+
+
+}
+
+.movie_render > img{
+
+    width: 250px;
+    height: auto;
+
+}
+
+.movie_render >p{
+    color: white;
+    
+
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+
+
+}
+
+
+ @media screen and (max-width: 500px)
+ {
+   .movie_render { margin:0 10% 0 0;}
+   
+ }
+
