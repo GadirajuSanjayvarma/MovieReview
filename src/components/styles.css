@@ -1,6 +1,12 @@
 body {
    font-family: "Lato", sans-serif;
  }
+
+ input.middle:focus
+ {
+  border: 0px;
+
+ }
  
  .sidenav {
    height: 100%;
@@ -40,15 +46,12 @@ body {
    .sidenav {padding-top: 15px;}
    .sidenav a {font-size: 18px;}
  }
- @media screen and (max-width: 1000px)
+ @media screen and (max-width: 500px)
  {
    .sidenav {position: absolute;}
    .sidenav {width: 0px;}
    .sidenav a {font-size: 18px;}
-   .elements {flex:0.10;}
-   .header{  flex-direction: column; }
-   .elements{margin-left: 0%;}
- }
+  }
 
 
 .header{
@@ -56,19 +59,27 @@ body {
    flex-direction: row;
    background-color: black;
    overflow: hidden;
-   justify-content: center;
+   justify-content:flex-start;
    flex-wrap: wrap;
    height: 70px;
-   
 }
 
 
 .elements
 {
-   
-   
+  
    color:yellow;
+   margin-left: 3vw;
    
+}
+
+.search-input
+{
+  background-color: transparent;
+  border: 0px;
+  padding-top: 3vh;
+  font-size: medium;
+  
 }
 
 .logo
@@ -76,25 +87,18 @@ body {
    flex:0.5;
    font-size: 25px;
    position: center;
-   align-items: flex-end;
-   
+  
    
 
 }
 
-.login-button
-{
-   min-width: 0;
-   flex:0.3;
-  align-items: flex-start;
-  margin-left: auto;
-
-}
 
 .icon
 {
    
    font-size:20px;
+   flex:0.5;
+  
    
 }
 
@@ -179,3 +183,9 @@ body {
 
 
 }
+
+
+@media screen and (max-width: 500px)
+ {
+   .header{  flex-direction: column; }
+  }

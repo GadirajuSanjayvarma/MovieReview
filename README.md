@@ -2,6 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## git remote add origin https://github.com/GadirajuSanjayvarma/MovieReview.git
+
+## git branch -M master
+
+## git push -u origin master
+
 In the project directory, you can run:
 
 ### `npm start`

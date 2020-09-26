@@ -1,9 +1,10 @@
 import React, {  useState } from "react";
 import "./styles.css";
+import {useHistory} from 'react-router-dom';
 
 function Header() {
   const [width,setWidth]=useState(null);
- 
+  const history=useHistory();
   return (
     <div className="header">
      <button className="elements button" onClick={()=>{
@@ -11,8 +12,10 @@ function Header() {
 
      }}><i className="fa fa-bars icon" ></i></button>
      <p className="elements logo">MovieReview</p>
-     <p className="elements login-button">Login/Signup</p>
-
+     <div className="elements" >
+    
+     <button  className="elements search-input" onClick={()=>{history.push('/search')}}> <i className=" elements fa fa-search fa-lg" ></i></button>
+     </div>
         
     <div id="mySidenav" className="sidenav" style={{width:width}}>
       <button href="/" className="closebtn button" onClick={()=>{setWidth("0%")}}>&times;</button>
@@ -20,6 +23,7 @@ function Header() {
       <a href="/">Services</a>
       <a href="/">Clients</a>
       <a href="/">Contact</a>
+      <a href='/' >Login/Signup</a>
     </div>
 
 

@@ -3,18 +3,27 @@ import '../styles/Moviesstyles.css';
 
 function Movies(props)
 {
-  //console.log(props.data);  
-  const render_movies=props.data.map((show)=>{
-    return(
+  console.log(props.data); 
+  var render_movies;
+  if(props.data){
+     render_movies=props.data.map((show,index)=>{
+      return(
+  
+          <div key={index} className="movie_render">
+            <img src={show.Poster} alt="loading"/>
+            <p>{show.Title}</p>
+            </div>
+  
+      );
+  
+    });
+  } 
+  else{
 
-        <div className="movie_render">
-          <img src={show.image_url} alt="loading"/>
-          <p>{show.name}</p>
-          </div>
+    render_movies="<p>loading</p>";
 
-    );
-
-  });
+  }
+  
 
 
 
@@ -25,7 +34,7 @@ function Movies(props)
     <h3 style={{color:"white"}}>{props.heading}</h3>
         </div>
         <div className="container_movies">
-         {render_movies}  
+           {render_movies}
          </div>
         </div>
     );
