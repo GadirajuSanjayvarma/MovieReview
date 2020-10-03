@@ -31,11 +31,18 @@ var slideIndex=1;
     <div >
     <div className="slideshow-container">
      <div className="fade1" style={{display:ClassN[0]}}>
-     <button  onClick={showSlides} style={{backgroundColor:"black",marginLeft:"95%",marginTop:"25vh",color:"white"}}>{`>`}</button></div>
+     <button  onClick={showSlides} style={{backgroundColor:"black",marginLeft:"95%",marginTop:"25vh",color:"white"}}>{`>`}</button>
+     <p>Money Heist</p>
+     
+     </div>
     <div  className="fade2"  style={{display:ClassN[1]}}>
-    <button  onClick={showSlides} style={{backgroundColor:"black",marginLeft:"95%",marginTop:"25vh",color:"white"}}>{`>`}</button></div>
+    <button  onClick={showSlides} style={{backgroundColor:"black",marginLeft:"95%",marginTop:"25vh",color:"white"}}>{`>`}</button>
+    <p>Tenet</p>
+    </div>
     <div className="fade3"   style={{display:ClassN[2]}}>
-    <button  onClick={showSlides} style={{backgroundColor:"black",marginLeft:"95%",marginTop:"25vh",color:"white"}}>{`>`}</button></div>
+    <button  onClick={showSlides} style={{backgroundColor:"black",marginLeft:"95%",marginTop:"25vh",color:"white"}}>{`>`}</button>
+    <p>Joker</p>
+    </div>
     
     </div>
     </div>

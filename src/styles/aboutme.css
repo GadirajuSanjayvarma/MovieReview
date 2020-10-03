@@ -1,0 +1,44 @@
+.aboutme-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.aboutme-header {
+  flex: 0.5;
+  flex-grow: 0.5;
+  flex-shrink: 0.5;
+  border: 2px solid yellow;
+}
+
+.aboutme-body {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://media.tenor.com/images/f6a0be5283611b98d50800d2df989bcd/tenor.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.aboutme-content {
+  margin: 25vh 0 0 10vh;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 30px;
+}
+
+.aboutme-body:hover {
+  background-image: none;
+  background-color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .aboutme-body {
+    height: 100%;
+  }
+  .aboutme-content {
+    font-size: 20px;
+  }
+  .aboutme-content {
+    margin: 10vh 0 0 5vh;
+  }
+}

@@ -1,41 +1,52 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import "../App.css";
 import Header from "./Header";
 import HtmlBanner from "./HtmlBanner";
 import Movies from "./Movies";
+import { connect } from "react-redux";
+import fetchHomeResults from "../redux/Actioncreators";
+
+const mapStateToProps = (state) => {
+  return {
+    movies: state.homeresults,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  fetchHomeResults: () => dispatch(fetchHomeResults()),
+});
+
 function Home(props) {
   const array = [
+    "Trending Movies",
     "Trending shows",
-    "Hollywood movies",
-    "bollywood movies",
-    "Tollywood movies",
+    "Trending Action Movies",
+    "Trending Animation shows",
+    "Golden movies",
   ];
-  const [Movie,setMovie]=useState({"Search":""});
 
-  useEffect(()=>{
-    
-  fetch('http://www.omdbapi.com/?s=dark&apikey=ad9ee299&plot=short&page=1') 
- .then((movies)=>movies.json())
- .then((result)=>setMovie(result)) 
-
-  },[]);
-  
+  useEffect(() => {
+    props.fetchHomeResults();
+  }, []);
+  //console.log(props.movies);
   return (
     <div className="container1">
+      
       <div className="header1">
-        <Header navigation={props.navigation}/>
+        <Header navigation={props.navigation} />
       </div>
       <div className="banner1">
         <HtmlBanner />
       </div>
+
       <div className="body">
-        <Movies heading={array[0]} data={Movie["Search"]} />
-        <Movies heading={array[1]} data={Movie["Search"]} />
-        <Movies heading={array[2]} data={Movie["Search"]} />
-        <Movies heading={array[3]} data={Movie["Search"]} />
+        <Movies heading={array[0]} data={props.movies} />
+        <Movies heading={array[1]} data={props.movies} />
+        <Movies heading={array[2]} data={props.movies} />
+        <Movies heading={array[3]} data={props.movies} />
+        <Movies heading={array[4]} data={props.movies} />
       </div>
     </div>
   );
 }
-
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -9,6 +9,13 @@
     overflow-x: hidden;
     
 }
+
+.search-header
+{
+    flex:0.3;
+    border: 2px solid yellow;
+    transition: 0.3s;
+}
 .input-element
 {
     flex:0.4;
@@ -35,7 +42,6 @@
 {
     border:0px ;
     border-bottom: 2px solid blue;
-    
 
 }
 
@@ -86,6 +92,3 @@
    .input-element { padding-left: 0%;}
    
  }
-
-
-
